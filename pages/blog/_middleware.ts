@@ -6,7 +6,5 @@ export function middleware(req: NextRequest, ev: NextFetchEvent) {
 
   // chamar alguma api
 
-  return NextResponse.redirect(
-    'https://nextjs-pyvca8--3000.local.webcontainer.io/'
-  );
+  return NextResponse.redirect(req.nextUrl.origin);
 }
